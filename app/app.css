@@ -3,9 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-jakarta: "Plus Jakarta Sans", sans-serif
 }
 
 html,
@@ -56,6 +59,18 @@ body {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-saweria: 4px 4px 0px 0px rgba(0,0,0,1);
+  --shadow-hover-saweria: 5px 5px 0 0 rgba(0,0,0,1);
+
+  --color-gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(262 50% 98%) 100%);
+
+  --color-linear-primary: #7c3bed;
+  --color-linear-secondary: #f04299;
+  --color-theme-primary: hsl(262 83% 58%);
+  --color-theme-secondary: hsl(180 70% 50%);
+  --color-theme-accent: hsl(330 85% 60%);
+
 }
 
 :root {
@@ -90,7 +105,7 @@ body {
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: #a1a1a1;
 }
 
 .dark {

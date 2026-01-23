@@ -61,7 +61,9 @@ body {
   --color-sidebar-ring: var(--sidebar-ring);
 
   --shadow-saweria: 4px 4px 0px 0px rgba(0,0,0,1);
-  --shadow-hover-saweria: 5px 5px 0 0 rgba(0,0,0,1);
+  --shadow-soft-saweria: 3px 3px 0px 0px rgba(0,0,0,1);
+  --shadow-hover-saweria: 6px 6px 0 0 rgba(0,0,0,1);
+  --shadow-hover-soft-saweria: 4px 4px 0 0 rgba(0,0,0,1);
 
   --color-gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(262 50% 98%) 100%);
 

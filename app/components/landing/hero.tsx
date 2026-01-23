@@ -5,7 +5,7 @@ import { linearBgClass, SaweriaButtonClass } from "~/lib/utils";
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen pt-20 overflow-hidden">
+        <section className="relative min-h-screen py-24 overflow-hidden">
             <div className="absolute inset-0 bg-linear-[135deg] from-purple-100 via-pink-100 to-yellow-50" />
 
             <motion.div
@@ -56,7 +56,7 @@ const HeroSection = () => {
 
                         {/* CTA Button */}
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <Button className={`bg-linear-to-r from-linear-primary to-linear-secondary text-muted 
+                            <Button className={`${linearBgClass} text-muted 
                             shadow-saweria border-2 border-black text-lg font-bold ${SaweriaButtonClass}`} size={'xl'}>Start Building Free <ArrowRight /></Button>
                             <Button className={`bg-muted text-primary hover:bg-muted shadow-saweria border-2 border-black text-lg font-bold 
                                 ${SaweriaButtonClass}`} size={'xl'}>See Templates</Button>
@@ -131,7 +131,7 @@ const HeroSection = () => {
                             <motion.div
                                 animate={{ y: [0, -10, 0], rotate: [-2, 2, -2] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -top-4 -right-4 bg-theme-secondary rounded-xl p-4 border-2 border-foreground shadow-saweria"
+                                className="absolute -top-20 -right-4 bg-theme-secondary rounded-xl p-4 border-2 border-foreground shadow-saweria"
                             >
                                 <div className="flex items-center gap-2">
                                     <Zap className="w-5 h-5 text-secondary-foreground" />
@@ -140,9 +140,9 @@ const HeroSection = () => {
                             </motion.div>
 
                             <motion.div
-                                animate={{ y: [0, 10, 0] }}
+                                animate={{ y: [0, 10, 0], rotate: [1, -1, 1] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                                className="absolute -bottom-4 -left-4 bg-theme-accent rounded-xl p-4 border-2 border-foreground shadow-saweria"
+                                className="absolute -bottom-20 -left-6 bg-theme-accent rounded-xl p-4 border-2 border-foreground shadow-saweria"
                             >
                                 <div className="flex items-center gap-2">
                                     <Star className="w-5 h-5 text-muted fill-muted" />
@@ -159,7 +159,7 @@ const HeroSection = () => {
                 <svg viewBox="0 0 1440 120" fill="none" className="w-full">
                     <path
                         d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-                        fill="hsl(var(--background))"
+                        fill="#ffffff"
                     />
                 </svg>
             </div>

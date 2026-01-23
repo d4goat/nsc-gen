@@ -26,7 +26,7 @@ const Navbar = () => {
                     </Link>
                     <ul className="flex gap-4 items-center ">
                         {navLink.map((item, index) => (
-                            <a key={index} className="text-muted-foreground hover:text-primary transition-colors duration-200" href={item.to}> {item.name} </a>
+                            <a key={index} className="text-muted-foreground hover:text-primary font-medium transition-colors duration-200" href={item.to}> {item.name} </a>
                         ))}
                     </ul>
                 </div>

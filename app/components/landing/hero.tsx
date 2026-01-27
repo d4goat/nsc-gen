@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { ArrowRight, Sparkles, Star, Zap } from "lucide-react";
 import { linearBgClass, SaweriaButtonClass } from "~/lib/utils";
+import { Link } from "react-router";
 
 const HeroSection = () => {
     return (
@@ -58,8 +59,8 @@ const HeroSection = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <Button className={`${linearBgClass} text-muted 
                             shadow-saweria border-2 border-black text-lg font-bold ${SaweriaButtonClass}`} size={'xl'}>Start Building Free <ArrowRight /></Button>
-                            <Button className={`bg-muted text-primary hover:bg-muted shadow-saweria border-2 border-black text-lg font-bold 
-                                ${SaweriaButtonClass}`} size={'xl'}>See Templates</Button>
+                            <Link to="/templates"><Button className={`bg-muted text-primary hover:bg-muted shadow-saweria border-2 border-black text-lg font-bold 
+                                ${SaweriaButtonClass}`} size={'xl'}>See Templates</Button></Link>
                         </div>
 
                         <motion.div

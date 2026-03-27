@@ -8,6 +8,7 @@ const Navbar = () => {
         { name: 'Features', to: '#features' },
         { name: 'How It Works', to: '#how-it-works' },
         { name: 'Testimonials', to: '#testimonials' },
+        { name: 'Templates', to: '/templates' },
     ]
     return (
         <motion.nav

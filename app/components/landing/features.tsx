@@ -59,7 +59,7 @@ const FeatureSection = () => {
                     <p className="text-muted-foreground text-lg">Powerful tools designed to make your job search easier and more successful.</p>
                 </motion.div>
 
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {featureItem.map((item, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

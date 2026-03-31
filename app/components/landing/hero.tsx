@@ -6,19 +6,19 @@ import { Link } from "react-router";
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen py-24 overflow-hidden">
+        <section className="relative min-h-screen py-28 md:py-24 overflow-hidden">
             <div className="absolute inset-0 bg-linear-[135deg] from-purple-100 via-pink-100 to-yellow-50" />
 
             <motion.div
                 animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-32 left-[10%] w-16 h-16 rounded-xl bg-theme-primary border-2 border-foreground shadow-saweria"
+                className="absolute top-24 md:top-32 left-[10%] w-16 h-16 rounded-xl bg-theme-primary border-2 border-foreground shadow-saweria"
             />
 
             <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-48 right-[15%] w-12 h-12 rounded-full bg-theme-secondary border-2 border-foreground shadow-saweria"
+                className="absolute top-52 md:top-48 right-[10%] md:right-[15%] w-12 h-12 rounded-full bg-theme-secondary border-2 border-foreground shadow-saweria"
             />
             <motion.div
                 animate={{ y: [-15, 15, -15], rotate: [0, -10, 0] }}
@@ -95,7 +95,7 @@ const HeroSection = () => {
                             <motion.div
                                 animate={{ y: [-5, 5, -5] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="relative z-10 bg-card rounded-2xl p-6 border-2 border-foreground shadow-[6px_6px_0_0_hsl(var(--foreground))]"
+                                className="relative z-10 bg-card top-8 rounded-2xl p-6 border-2 border-foreground shadow-[6px_6px_0_0_hsl(var(--foreground))]"
                             >
                                 <div className="flex items-start gap-4 mb-6">
                                     <div className={`w-16 h-16 rounded-xl ${linearBgClass} border-2 border-foreground flex items-center justify-center text-primary-foreground font-bold text-xl shadow-saweria`}>
@@ -132,7 +132,7 @@ const HeroSection = () => {
                             <motion.div
                                 animate={{ y: [0, -10, 0], rotate: [-2, 2, -2] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -top-20 -right-4 bg-theme-secondary rounded-xl p-4 border-2 border-foreground shadow-saweria"
+                                className="absolute -top-10 md:-top-20 -right-4 bg-theme-secondary rounded-xl p-4 border-2 border-foreground shadow-saweria"
                             >
                                 <div className="flex items-center gap-2">
                                     <Zap className="w-5 h-5 text-secondary-foreground" />
@@ -143,7 +143,7 @@ const HeroSection = () => {
                             <motion.div
                                 animate={{ y: [0, 10, 0], rotate: [1, -1, 1] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                                className="absolute -bottom-20 -left-6 bg-theme-accent rounded-xl p-4 border-2 border-foreground shadow-saweria"
+                                className="absolute -bottom-24 md:-bottom-20 -left-6 bg-theme-accent rounded-xl p-4 border-2 border-foreground shadow-saweria"
                             >
                                 <div className="flex items-center gap-2">
                                     <Star className="w-5 h-5 text-muted fill-muted" />

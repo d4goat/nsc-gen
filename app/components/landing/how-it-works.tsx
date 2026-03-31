@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
                 className={`${SaweriaClass} rounded-xl absolute bottom-10 right-14 w-10 h-10 bg-theme-accent`}
             ></motion.div>
 
-            <div className="container mx-auto relative z-10">
+            <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const HowItWorksSection = () => {
                     <span className="text-muted-foreground text-lg">Our streamlined process makes creating a professional CV easier than ever.</span>
                 </motion.div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
                     {steps.map((item, index) => (
                         <motion.div
                             key={index}

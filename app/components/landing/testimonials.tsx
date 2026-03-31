@@ -81,7 +81,7 @@ const TestiomonialSection = () => {
                 className={`rounded-full bg-theme-accent ${SaweriaClass} w-7 h-7 absolute bottom-14 right-[20%]`}
             />
 
-            <div className="container mx-auto z-10 relative">
+            <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ const TestiomonialSection = () => {
                     <p className="text-lg text-muted-foreground">See what our have users to say about their experience with NSC-GEN.</p>
                 </motion.div>
 
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {testimonials.map((item, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

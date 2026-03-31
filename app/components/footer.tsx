@@ -35,7 +35,7 @@ const Footer = () => {
 
     return (
         <footer className="border-t-2 border-black bg-purple-100">
-            <div className="container mx-auto py-20">
+            <div className="container mx-auto px-4 py-20">
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-6 mb-12">
                     <div className="col-span-2 flex flex-col gap-3">
                         <Link to={'/'} className="flex items-center gap-6">

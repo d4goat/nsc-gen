@@ -71,7 +71,7 @@ const Test = () => {
                     <p className="text-muted-foreground text-lg">Select from a variety of professionally designed CV templates to make your application stand out.</p>
                 </motion.div>
 
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {templatesItem.map((item, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

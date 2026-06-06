@@ -4,7 +4,7 @@ import { useForm, useFieldArray, Controller } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 import { Button } from "../ui/button";
 import { Card, CardHeader, CardContent, CardTitle, CardFooter } from "../ui/card";
-import type { TemplateProps } from "../../types/template";
+import type { TemplateProps1 } from "../../types/template";
 import { Plus, Trash } from "lucide-react";
 import { SaweriaCardClass, SaweriaClass } from "~/lib/utils";
 import type React from "react";
@@ -79,7 +79,7 @@ export function Templates1Form() {
 
     // Special handling for array of strings (coreConpetency)
     // We need to map them to objects for useFieldArray or manage manually
-    // But since TemplateProps defines them as string[], we'll use a wrapper approach if we use useFieldArray,
+    // But since TemplateProps1 defines them as string[], we'll use a wrapper approach if we use useFieldArray,
     // or just simple index management. useFieldArray is cleaner but tricky with primitives.
     // Let's use useFieldArray with a trick or just simple state for these?
     // RHF docs say: "append({ test: 'test' })" for object arrays.

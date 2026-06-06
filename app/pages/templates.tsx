@@ -3,12 +3,13 @@ import { Card, CardContent, CardHeader } from "../components/ui/card";
 import { motion } from "framer-motion";
 import { SaweriaCardClass, SaweriaWithHoverClass } from "~/lib/utils";
 import type { Route } from "./+types/templates";
-import { template1Data } from "~/data/template-data";
+import { template1Data, template2Data } from "~/data/template-data";
 import Templates1 from "~/components/templates/templates-1";
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogFooter } from "~/components/ui/dialog";
 import { ScrollArea } from "~/components/ui/scroll-area";
 import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
+import Templates2 from "~/components/templates/templates-2";
 
 export function meta({ }: Route.MetaArgs) {
     return [
@@ -33,13 +34,14 @@ const Test = () => {
         {
             title: "Test2",
             img: "app/assets/img/template2.png",
-            preview: <Templates1
-                title={template1Data.title}
-                profile={template1Data.profile}
-                workExperience={template1Data.workExperience}
-                studyExperience={template1Data.studyExperience}
-                coreConpetency={template1Data.coreConpetency}
-                certificate={template1Data.certificate}
+            preview: <Templates2
+                title={template2Data.title}
+                profile={template2Data.profile}
+                workExperience={template2Data.workExperience}
+                studyExperience={template2Data.studyExperience}
+                coreConpetency={template2Data.coreConpetency}
+                certificate={template2Data.certificate}
+                additionalInformation={template2Data.additionalInformation}
             />
         },
         {

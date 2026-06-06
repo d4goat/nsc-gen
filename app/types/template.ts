@@ -1,35 +1,54 @@
 interface titleTypes {
-    title: string;
-    contact: {
-        street: string;
-        phone: string;
-        mail: string;
-    }
+  title: string;
+  contact: {
+    street: string;
+    phone: string;
+    mail: string;
+  };
 }
 
 interface timeline {
-    from: number
-    to: number;
+  from: number | string;
+  to: number | string;
 }
 
 type WorkExperience = {
-    workTitle: string;
-    workList: string[];
-    workTimeline: timeline
-}
+  workTitle: string;
+  workList: string[];
+  workTimeline: timeline;
+};
 
 type StudyExperience = {
+  title: string;
+  studyTimeline: timeline;
+};
+
+interface TemplateProps1 {
+  title: titleTypes;
+  profile: string;
+  workExperience?: WorkExperience[];
+  studyExperience: StudyExperience[];
+  certificate?: string[];
+  coreConpetency: string[];
+}
+
+interface TemplateProps2 extends Omit<
+  TemplateProps1,
+  "coreConpetency" | "studyExperience"
+> {
+  coreConpetency: { title: string; data: string[] }[];
+  studyExperience: {
     title: string;
-    studyTimeline: timeline
+    university: string;
+    timeline: timeline;
+    skills: string[];
+  }[];
+  additionalInformation?: string[];
 }
 
-interface TemplateProps {
-    title: titleTypes
-    profile: string;
-    workExperience?: WorkExperience[]
-    studyExperience: StudyExperience[]
-    certificate?: string[]
-    coreConpetency: string[]
-}
+type TemplateProps3 = Omit<
+  TemplateProps2,
+  "additionalInformation" | "certificate"
+>;
 
-export type { TemplateProps }
+export type { TemplateProps1, TemplateProps2, TemplateProps3 };

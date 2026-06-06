@@ -1,10 +1,10 @@
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "../ui/card";
 import { Separator } from "../ui/separator";
-import type { TemplateProps } from "~/types/template";
+import type { TemplateProps1 } from "~/types/template";
 
 const headClassFont = 'font-serif text-lg font-semibold'
 
-const Templates1 = ({ coreConpetency, profile, studyExperience, title, certificate, workExperience }: TemplateProps) => {
+const Templates1 = ({ coreConpetency, profile, studyExperience, title, certificate, workExperience }: TemplateProps1) => {
     return (
         <Card className={`h-full `}>
             <CardHeader>
@@ -96,5 +96,5 @@ const Templates1 = ({ coreConpetency, profile, studyExperience, title, certifica
     )
 }
 
-export type { TemplateProps }
+export type { TemplateProps1 }
 export default Templates1

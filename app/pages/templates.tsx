@@ -27,7 +27,7 @@ const Test = () => {
                 profile={template1Data.profile}
                 workExperience={template1Data.workExperience}
                 studyExperience={template1Data.studyExperience}
-                coreConpetency={template1Data.coreConpetency}
+                coreCompetency={template1Data.coreCompetency}
                 certificate={template1Data.certificate}
             />
         },
@@ -39,7 +39,7 @@ const Test = () => {
                 profile={template2Data.profile}
                 workExperience={template2Data.workExperience}
                 studyExperience={template2Data.studyExperience}
-                coreConpetency={template2Data.coreConpetency}
+                coreCompetency={template2Data.coreCompetency}
                 certificate={template2Data.certificate}
                 additionalInformation={template2Data.additionalInformation}
             />
@@ -52,7 +52,7 @@ const Test = () => {
                 profile={template1Data.profile}
                 workExperience={template1Data.workExperience}
                 studyExperience={template1Data.studyExperience}
-                coreConpetency={template1Data.coreConpetency}
+                coreCompetency={template1Data.coreCompetency}
                 certificate={template1Data.certificate}
             />
         }

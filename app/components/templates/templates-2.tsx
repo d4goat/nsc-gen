@@ -2,7 +2,7 @@ import { Card, CardContent } from "../ui/card";
 import type { TemplateProps2 } from "~/types/template";
 
 const Templates2 = ({
-    coreConpetency,
+    coreCompetency,
     profile,
     studyExperience,
     title,
@@ -109,13 +109,13 @@ const Templates2 = ({
                         </div>
 
                         {/* Skills */}
-                        {coreConpetency && coreConpetency.length > 0 && (
+                        {coreCompetency && coreCompetency.length > 0 && (
                             <div className="flex flex-col">
                                 <h2 className="text-[17px] font-bold text-neutral-900 mb-4">
                                     Skills
                                 </h2>
                                 <div className="space-y-5">
-                                    {coreConpetency.map((item, index) => (
+                                    {coreCompetency.map((item, index) => (
                                         <div key={index} className="flex flex-col">
                                             <h3 className="font-bold text-[13.5px] text-neutral-900 mb-2">
                                                 {item.title}

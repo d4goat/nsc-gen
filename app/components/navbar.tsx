@@ -25,7 +25,7 @@ const Navbar = () => {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="fixed left-0 top-0 right-0 backdrop-blur-md bg-background/95 z-50 border-b-2 border-black">
+            className="fixed left-0 top-0 right-0 backdrop-blur-md bg-background/95 z-50 border-b-2 border-black print:hidden">
             <div className="container mx-auto px-4 h-16 lg:h-20">
                 <div className="flex justify-between items-center h-full">
                     <Link to="/" className="flex items-center gap-3">

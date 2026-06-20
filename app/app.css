@@ -151,3 +151,63 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0; /* Menghilangkan Header & Footer default browser (tanggal, URL, judul) */
+  }
+
+  body, html, main {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Terapkan margin cetak pada body untuk menggantikan margin halaman */
+  body {
+    padding: 15mm 20mm 15mm 20mm !important;
+  }
+
+  /* Sembunyikan elemen yang tidak perlu dicetak secara mutlak */
+  form, 
+  .print\:hidden, 
+  header, 
+  footer, 
+  nav, 
+  button, 
+  h3.print\:hidden {
+    display: none !important;
+  }
+
+  /* Atur lebar penuh untuk kontainer peninjau */
+  .container, .grid, .lg\:col-span-5 {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Reset styling Card */
+  div, section, main, article, [data-slot="card"], .card {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  hr, [data-slot="separator"] {
+    border-top: 1px solid #e5e7eb !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}

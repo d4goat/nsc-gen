@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
+import { Textarea } from './ui/textarea';
 
 interface ComponentProps {
     name: string;
     label?: string;
     onBlur?: () => void;
     value?: any;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     error?: string;
     type?: string;
     inputClass?: string;
@@ -15,10 +16,11 @@ interface ComponentProps {
     required?: boolean;
     placeholder?: string;
     disabled?: boolean;
+    rows?: number;
     [key: string]: any; // Allow additional props
 }
 
-const FormInput = React.forwardRef<HTMLInputElement, ComponentProps>(
+const FormInput = React.forwardRef<any, ComponentProps>(
     ({
         name,
         label,
@@ -32,6 +34,7 @@ const FormInput = React.forwardRef<HTMLInputElement, ComponentProps>(
         required = false,
         placeholder,
         disabled = false,
+        rows = 4,
         ...props
     }, ref) => {
         const inputId = id || name;
@@ -40,19 +43,37 @@ const FormInput = React.forwardRef<HTMLInputElement, ComponentProps>(
         return (
             <div className="w-full">
                 <Label htmlFor={inputId} className='capitalize mb-2'>{labelText}{required && <span className="text-red-500"> *</span>}</Label>
-                <Input
-                    ref={ref}
-                    onBlur={onBlur}
-                    value={value}
-                    type={type}
-                    className={inputClass}
-                    onChange={onChange}
-                    id={inputId}
-                    placeholder={placeholder}
-                    disabled={disabled}
-                    required={required}
-                    {...props}
-                />
+                {type === "textarea" ? (
+                    <Textarea
+                        ref={ref}
+                        onBlur={onBlur}
+                        value={value}
+                        rows={rows}
+                        className={inputClass}
+                        onChange={onChange}
+                        id={inputId}
+                        name={name}
+                        placeholder={placeholder}
+                        disabled={disabled}
+                        required={required}
+                        {...props}
+                    />
+                ) : (
+                    <Input
+                        ref={ref}
+                        onBlur={onBlur}
+                        value={value}
+                        type={type}
+                        className={inputClass}
+                        onChange={onChange}
+                        id={inputId}
+                        name={name}
+                        placeholder={placeholder}
+                        disabled={disabled}
+                        required={required}
+                        {...props}
+                    />
+                )}
                 {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
             </div>
         )
@@ -60,3 +81,4 @@ const FormInput = React.forwardRef<HTMLInputElement, ComponentProps>(
 );
 
 export { FormInput };
+

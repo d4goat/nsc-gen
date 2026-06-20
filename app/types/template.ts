@@ -29,14 +29,14 @@ interface TemplateProps1 {
   workExperience?: WorkExperience[];
   studyExperience: StudyExperience[];
   certificate?: string[];
-  coreConpetency: string[];
+  coreCompetency: string[];
 }
 
 interface TemplateProps2 extends Omit<
   TemplateProps1,
-  "coreConpetency" | "studyExperience"
+  "coreCompetency" | "studyExperience"
 > {
-  coreConpetency: { title: string; data: string[] }[];
+  coreCompetency: { title: string; data: string[] }[];
   studyExperience: {
     title: string;
     university: string;

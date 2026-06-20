@@ -4,7 +4,7 @@ import type { TemplateProps3 } from "~/types/template";
 
 const headClassFont = 'font-serif text-lg font-semibold'
 
-const Templates3 = ({ coreConpetency, profile, studyExperience, title, workExperience }: TemplateProps3) => {
+const Templates3 = ({ coreCompetency, profile, studyExperience, title, workExperience }: TemplateProps3) => {
     return (
         <Card className={`h-full `}>
             <CardHeader className="text-center">

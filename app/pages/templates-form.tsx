@@ -9,8 +9,8 @@ export function meta({ params }: Route.MetaArgs) {
 
 export default function TemplatesFormPage() {
     return (
-        <div className="container mx-auto py-8">
-            <h1 className="text-2xl font-bold mb-6 text-center">Resume Generator</h1>
+        <div className="container mx-auto py-8 print:py-0 print:my-0 print:max-w-none">
+            <h1 className="text-2xl font-bold mb-6 text-center print:hidden">Resume Generator</h1>
             <Templates1Form />
         </div>
     );

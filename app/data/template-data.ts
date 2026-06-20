@@ -47,7 +47,7 @@ const template1Data: TemplateProps1 = {
     "Certified Digital Marketing Associate",
     "Email Marketing Fundametals",
   ],
-  coreConpetency: [
+  coreCompetency: [
     "Digital Advertising",
     "SEO",
     "Social Media Management",
@@ -109,7 +109,7 @@ const template2Data: TemplateProps2 = {
     "Certified Financial Analyst",
     "Advanced Spreadsheet for Accounting & Finance",
   ],
-  coreConpetency: [
+  coreCompetency: [
     {
       title: "Technical Skills",
       data: [
@@ -152,7 +152,7 @@ const template3Data: TemplateProps3 = {
   },
   profile:
     "Results-oriented Engineering Executive with a proven track record of optimizing project outcomes. Skilled in strategic project management and team leadership. Seeking a challenging executive role to leverage technical expertise and drive engineering excellence.",
-  coreConpetency: [
+  coreCompetency: [
     {
       title: "Technical Skills",
       data: [

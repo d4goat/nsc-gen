@@ -155,8 +155,16 @@ export function Templates1Form() {
 
     const onSubmit: SubmitHandler<FormValues> = (data) => {
         console.log("Form Data:", data);
+        const originalTitle = document.title;
+
+        if (data.title?.title) {
+            document.title = `Resume - ${data.title.title}`;
+        } else {
+            document.title = "Resume";
+        }
+
         window.print();
-        // alert(JSON.stringify(data, null, 2));
+        document.title = originalTitle;
     };
 
     return (
